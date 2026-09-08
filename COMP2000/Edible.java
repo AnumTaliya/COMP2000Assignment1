@@ -1,5 +1,3 @@
-package COMP2000;
-
-public class Edible {
-    
+public interface Edible {
+    double getNutritionValue();
 }
