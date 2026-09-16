@@ -14,7 +14,6 @@ public class SimPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // Safe zone: predators cannot enter this rectangle.
         g.setColor(new Color(80, 160, 255, 40));
         g.fillRect((int) world.getZoneX(), (int) world.getZoneY(),
                    (int) world.getZoneWidth(), (int) world.getZoneHeight());

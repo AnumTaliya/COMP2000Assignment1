@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 public abstract class Predator extends Animal {
     protected double eatDistance = 8;
 
@@ -21,4 +19,3 @@ public abstract class Predator extends Animal {
         return false;
     }
 }
->>>>>>> Stashed changes

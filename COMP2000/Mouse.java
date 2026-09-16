@@ -2,12 +2,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.List;
 
-/**
- * Mice behave like Rabbits (flee predators, eat food) but also reproduce:
- * when two mice that are both off cooldown come within CONTACT_DISTANCE of
- * each other, a new Mouse is spawned near them and both parents get a
- * cooldown so the population doesn't explode every single tick.
- */
 public class Mouse extends Prey {
     private double reproduceCooldown = 0;
     private static final double CONTACT_DISTANCE = 10;
@@ -15,7 +9,7 @@ public class Mouse extends Prey {
     private static final double MIN_HEALTH_TO_REPRODUCE = 15;
 
     public Mouse(double x, double y) {
-        super(x, y, 40, 70, 20); // health, visionRadius, nutritionValue (worth to a predator)
+        super(x, y, 40, 70, 20);
     }
 
     @Override
@@ -58,7 +52,6 @@ public class Mouse extends Prey {
                     this.reproduceCooldown = COOLDOWN_TICKS;
                     other.reproduceCooldown = COOLDOWN_TICKS;
                 } catch (SpawnException e) {
-                    // No valid spot this tick (e.g. too close to the world edge) - just skip.
                     System.out.println("Reproduction skipped: " + e.getMessage());
                 }
                 break;

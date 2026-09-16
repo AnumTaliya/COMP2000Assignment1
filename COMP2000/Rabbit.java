@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.List;
 
-/** Rabbits flee from any predator in range, otherwise seek food, otherwise wander. */
 public class Rabbit extends Prey {
     private double reproduceCooldown = 0;
     private static final double CONTACT_DISTANCE = 10;
@@ -10,7 +9,7 @@ public class Rabbit extends Prey {
     private static final double MIN_HEALTH_TO_REPRODUCE = 15;
 
     public Rabbit(double x, double y) {
-        super(x, y, 60, 80, 35); // health, visionRadius, nutritionValue (worth to a predator)
+        super(x, y, 60, 80, 35);
     }
 
     @Override

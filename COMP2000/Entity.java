@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -37,4 +35,3 @@ public abstract class Entity {
         return String.format("%s at (%.0f, %.0f)", getClass().getSimpleName(), x, y);
     }
 }
->>>>>>> Stashed changes
